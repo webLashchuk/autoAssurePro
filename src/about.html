@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="uk" class="page">
+<include src="./html/_head.html" locals='{"title": "About Us"}'></include>
+
+<body class="page__body">
+  <div class="site-container">
+
+    <include src="./html/_header.html" locals='{"page": "about", "class":""}'></include>
+
+    <main class="main">
+
+      <include src="./html/_hero.html">
+        {
+        "addClass":"",
+        "image":"about/hero.jpg",
+        "title":"Empowering Your Journey: Get to Know AutoAssure Pro",
+        "titleAccent":"",
+        "text":"Discover Our Commitment to Excellence and Customer Satisfaction"
+        }
+      </include>
+
+      <include src="./html/about/_cases.html"></include>
+
+      <include src="./html/about/_values.html"></include>
+
+      <include src="./html/about/_team.html"></include>
+
+      <include src="./html/about/_team-case.html"></include>
+
+      <include src="./html/_contact.html"></include>
+
+    </main>
+
+    <include src="./html/_footer.html"></include>
+
+  </div>
+</body>
+
+</html>

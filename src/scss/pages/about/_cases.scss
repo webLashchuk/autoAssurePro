@@ -1,0 +1,22 @@
+@use "../../utils/functions/"as*;
+@use "../../utils/mixins/"as*;
+
+.cases {
+  &__item {
+    &.section {
+      padding-block: 64px;
+    }
+
+    &:first-child {
+      &.section {
+        padding-block: 86px 64px;
+      }
+    }
+
+    &:last-child {
+      &.section {
+        padding-block: 64px 86px;
+      }
+    }
+  }
+}

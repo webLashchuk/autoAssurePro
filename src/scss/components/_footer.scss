@@ -1,0 +1,43 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.footer {
+  &__top {
+    padding-block: 55px;
+    background-color: var(--color-blue-300);
+  }
+
+  &__bottom,
+  &__list {
+    @include flex-all-sb;
+  }
+
+  &__bottom {
+    padding-block: 20px;
+
+    @include media(mobile-l) {
+      flex-direction: column-reverse;
+    }
+
+    p,
+    a {
+      font-size: 16px;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 48px;
+    }
+  }
+
+  .copyright {
+    color: inherit;
+
+    @include media(mobile-s) {
+      max-width: 170px;
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+}

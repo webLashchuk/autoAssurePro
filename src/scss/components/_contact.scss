@@ -1,0 +1,92 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.contact {
+  min-height: 900px;
+  @include cover-background;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+
+  h2 {
+    margin-bottom: 32px;
+  }
+
+  .container--wide {
+    padding: 0;
+  }
+
+  &__wrapper {
+    max-width: 915px;
+    position: relative;
+    background-color: var(--color-white);
+    margin-left: auto;
+    padding-left: 105px;
+  }
+
+  &__inner {
+    display: flex;
+  }
+
+  &__form {
+    max-width: 390px;
+    width: 100%;
+    margin-right: 24px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  label {
+    display: inline-block;
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  input {
+    width: 100%;
+    border-radius: calc(var(--radius-main) * 4 + 2px);
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    background-color: var(--color-blue-100);
+    font-size: 16px;
+    padding: 16px;
+    font-family: var(--font-family-primary);
+    border-radius: calc(var(--radius-main) - 4px);
+  }
+
+  textarea {
+    border: none;
+    min-height: 155px;
+    resize: vertical;
+  }
+
+  abbr {
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  a {
+    color: var(--color-blue-900);
+  }
+
+  &__list,
+  a {
+    font-size: 16px;
+    font-family: var(--font-family-contact);
+  }
+
+  .btn {
+    max-width: 100%;
+    width: 100%;
+  }
+}

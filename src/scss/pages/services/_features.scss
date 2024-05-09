@@ -1,0 +1,10 @@
+@use "../../utils/functions/"as*;
+@use "../../utils/mixins/"as*;
+
+.features {
+  &__wrapper {
+    h2 {
+      margin: 0 auto 65px;
+    }
+  }
+}

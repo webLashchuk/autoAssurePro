@@ -1,0 +1,58 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+h1,
+h2,
+h3 {
+  overflow: hidden;
+  width: fit-content;
+  font-weight: var(--fw-600);
+  color: var(--color-black-900);
+  text-transform: capitalize;
+}
+
+h1 {
+  font-size: 56px;
+
+  @include media(mobile-l) {
+    font-size: 46px;
+  }
+
+  @include media(mobile-s) {
+    font-size: 34px;
+  }
+}
+
+h2,
+.title {
+  font-size: 48px;
+  color: var(--color-black-900);
+
+  @include media(tablet) {
+    font-size: 42px;
+  }
+
+  @include media(mobile-m) {
+    font-size: 30px;
+  }
+}
+
+h3 {
+  font-size: 20px;
+}
+
+p {
+  font-family: var(--font-family-secondary);
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: var(--fw-400);
+  color: var(--color-dark-800);
+
+  @include media(tablet) {
+    font-size: 18px;
+  }
+
+  @include media(mobile-l) {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,6 @@
+@use "../../utils/functions/"as*;
+@use "../../utils/mixins/"as*;
+
+.values {
+  background-color: var(--color-blue-100);
+}

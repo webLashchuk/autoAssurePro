@@ -1,0 +1,16 @@
+@use "../../utils/functions/"as*;
+@use "../../utils/mixins/"as*;
+
+.about {
+  &__wrapper {
+    @include flex-all-sb;
+  }
+
+  &__content {
+    max-width: 495px;
+  }
+
+  &.section {
+    padding-block: 86px 64px;
+  }
+}

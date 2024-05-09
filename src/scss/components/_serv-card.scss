@@ -1,0 +1,104 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.serv-card {
+  position: relative;
+  padding-top: 72px;
+
+  &::before {
+    @include pseudo;
+    @include contain-background;
+    top: 0;
+    left: 0;
+    width: 48px;
+    height: 48px;
+  }
+
+  &--comprehensive {
+    &::before {
+      background-image: var(--comprehensive);
+    }
+  }
+
+  &--collision {
+    &::before {
+      background-image: var(--collision);
+    }
+  }
+
+  &--liability {
+    &::before {
+      background-image: var(--liability);
+    }
+  }
+
+  &--additional {
+    &::before {
+      background-image: var(--additional);
+    }
+  }
+
+  &--integrity {
+    &::before {
+      background-image: var(--integrity);
+    }
+  }
+
+  &--quality {
+    &::before {
+      background-image: var(--quality);
+    }
+  }
+
+  &--reliability {
+    &::before {
+      background-image: var(--reliability);
+    }
+  }
+
+  &--innovation {
+    &::before {
+      background-image: var(--innovation);
+    }
+  }
+
+  &--satisfaction {
+    &::before {
+      background-image: var(--satisfaction);
+    }
+  }
+
+  h3 {
+    margin-bottom: 24px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  &--about {
+    padding: 132px 30px 60px;
+    background-color: var(--color-white);
+    box-shadow: 0px 5px 10px 5px var(--color-blue-100);
+    max-width: 286px;
+    width: 100%;
+    border-radius: var(--radius-main);
+
+    &::before {
+      top: 60px;
+      left: 30px;
+    }
+  }
+
+  &--services {
+    background-color: var(--color-white);
+    box-shadow: 0px 5px 10px 5px var(--color-blue-100);
+    border-radius: var(--radius-main);
+    padding: 100px 30px 55px;
+
+    &::before {
+      top: 30px;
+      left: 30px;
+    }
+  }
+}

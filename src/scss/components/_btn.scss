@@ -1,0 +1,92 @@
+/* stylelint-disable declaration-no-important */
+@use "../utils/functions/"as*;
+@use "../utils/mixins"as*;
+
+*[class].btn {
+  position: relative;
+  @include flex-all-center;
+  max-width: fit-content;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  border-radius: calc(var(--radius-main) * 4 + 2px);
+  font-weight: var(--fw-500);
+  font-size: 18px;
+  line-height: 1;
+  margin: 0;
+  text-align: center;
+  text-transform: capitalize;
+  background-color: transparent !important;
+  transition-property: background-color, color, border-color;
+  transition-duration: 0.2s;
+
+  &--user,
+  &--order {
+    border-color: var(--color-blue-900) !important;
+    padding: 10px 15px;
+  }
+
+  &--user {
+    color: var(--color-blue-900);
+
+    &:hover {
+      background-color: var(--color-blue-900) !important;
+      color: var(--color-white);
+
+      @include media(tablet) {
+        background-color: transparent !important;
+        color: var(--color-blue-900);
+      }
+    }
+  }
+
+  &--order {
+    background-color: var(--color-blue-900) !important;
+    color: var(--color-white) !important;
+    text-transform: none;
+
+    &:hover {
+      background-color: transparent !important;
+      color: var(--color-blue-900) !important;
+
+      @include media(tablet) {
+        background-color: var(--color-blue-900) !important;
+        color: var(--color-white) !important;
+      }
+    }
+  }
+
+  &--white {
+    background-color: var(--color-white) !important;
+    color: var(--color-black-900) !important;
+    padding: 19px 24px;
+
+    &:hover {
+      background-color: var(--color-blue-700) !important;
+      color: var(--color-white) !important;
+
+      @include media(tablet) {
+        background-color: var(--color-white) !important;
+        color: var(--color-black-900) !important;
+      }
+    }
+  }
+
+  &--blue {
+    background-color: var(--color-blue-700) !important;
+    padding: 19px 24px;
+    color: var(--color-white);
+    text-transform: none;
+
+    &:hover {
+      background-color: transparent !important;
+      border-color: var(--color-blue-700) !important;
+      color: var(--color-blue-700);
+
+      @include media(tablet) {
+        background-color: var(--color-blue-700) !important;
+        border-color: transparent !important;
+        color: var(--color-white);
+      }
+    }
+  }
+}

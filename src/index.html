@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="uk" class="page">
+<include src="./html/_head.html" locals='{"title": "Home"}'></include>
+
+<body class="page__body">
+  <div class="site-container">
+
+    <include src="./html/_header.html" locals='{"page": "home", "class":""}'></include>
+
+    <main class="main">
+
+      <include src="./html/_hero.html">
+        {
+        "addClass":"",
+        "image":"home/hero.jpg",
+        "title":"Protected at Every Turn: Your Vehicle is in",
+        "titleAccent":"Safe Hands",
+        "text":"With AutoAssure Pro, you get more than insurance — you gain peace of mind on the road."
+        }
+      </include>
+
+      <include src="./html/home/_home-services.html"></include>
+
+      <include src="./html/home/_home-about.html"></include>
+
+      <include src="./html/home/_info.html"></include>
+
+      <include src="./html/home/_reviews.html"></include>
+
+      <include src="./html/_contact.html"></include>
+
+    </main>
+
+    <include src="./html/_footer.html"></include>
+
+  </div>
+</body>
+
+</html>
