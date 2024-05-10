@@ -5,7 +5,8 @@
   h2 {
     max-width: 800px;
     text-align: center;
-    margin: 0 auto 24px;
+    line-height: 1.2;
+    margin: 0 auto 25px;
 
     span {
       color: var(--color-blue-700);
@@ -20,5 +21,10 @@
   &__list {
     display: flex;
     gap: 24px;
+
+    @include media(tablet) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 }

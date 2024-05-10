@@ -40,4 +40,11 @@
     border-bottom: 1px solid var(--color-blue-300);
     padding-block: 10px;
   }
+
+  &__btns {
+    @include media(tablet) {
+      margin: 0 auto;
+      gap: 30px;
+    }
+  }
 }

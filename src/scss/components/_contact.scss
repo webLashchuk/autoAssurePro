@@ -8,8 +8,17 @@
   align-items: flex-end;
   justify-content: flex-end;
 
+  @include media(tablet) {
+    min-height: auto;
+  }
+
   h2 {
-    margin-bottom: 32px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+
+    @include media(tablet) {
+      margin: 0 auto 30px;
+    }
   }
 
   .container--wide {
@@ -22,22 +31,44 @@
     background-color: var(--color-white);
     margin-left: auto;
     padding-left: 105px;
+
+    @include media(tablet) {
+      max-width: 100%;
+      padding-inline: 15px;
+      background-color: rgba(255, 255, 255, 0.9);
+    }
   }
 
   &__inner {
     display: flex;
+
+    @include media(tablet) {
+      justify-content: center;
+    }
+
+    @include media(mobile-m) {
+      flex-direction: column-reverse;
+      gap: 25px;
+    }
   }
 
   &__form {
     max-width: 390px;
     width: 100%;
     margin-right: 24px;
+
+    @include media(mobile-m) {
+      max-width: 100%;
+    }
   }
 
   &__content {
-    display: flex;
-    flex-direction: column;
+    @include flex-col;
     gap: 30px;
+
+    @include media(mobile-m) {
+      gap: 15px;
+    }
   }
 
   label {
@@ -45,7 +76,7 @@
     width: 100%;
 
     &:not(:last-child) {
-      margin-bottom: 16px;
+      margin-bottom: 17px;
     }
   }
 
@@ -59,7 +90,8 @@
     width: 100%;
     background-color: var(--color-blue-100);
     font-size: 16px;
-    padding: 16px;
+    padding: 15px;
+    line-height: 1;
     font-family: var(--font-family-primary);
     border-radius: calc(var(--radius-main) - 4px);
   }
@@ -70,6 +102,10 @@
     resize: vertical;
   }
 
+  h3 {
+    line-height: 1;
+  }
+
   abbr {
     text-decoration: none;
     text-transform: uppercase;
@@ -77,12 +113,17 @@
 
   a {
     color: var(--color-blue-900);
+    line-height: 1.4;
   }
 
   &__list,
   a {
     font-size: 16px;
     font-family: var(--font-family-contact);
+  }
+
+  &__list {
+    line-height: 1.4;
   }
 
   .btn {

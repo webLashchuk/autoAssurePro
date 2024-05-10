@@ -6,8 +6,7 @@
   @include cover-background;
 
   &__content {
-    display: flex;
-    justify-content: center;
+    @include flex-h-center;
     min-height: 100vh;
     position: relative;
     flex-direction: column;
@@ -15,7 +14,7 @@
     z-index: 1;
 
     @include media(tablet-wide) {
-      justify-content: center;
+      padding-top: 0;
       min-height: 700px;
     }
 

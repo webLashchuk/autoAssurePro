@@ -5,18 +5,23 @@
   text-align: center;
 
   h2 {
+    line-height: 1.25;
     margin: 0 auto 24px;
 
     +p {
       max-width: 1010px;
-      margin-bottom: 65px;
+      margin: 0 auto 65px;
     }
   }
 
   &__list {
-    display: flex;
-    justify-content: space-between;
+    @include flex-sb;
     gap: 24px;
+
+    @include media(tablet) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
   &__item {
@@ -49,21 +54,20 @@
     }
 
     p {
+      font-size: 16px;
       margin-bottom: 16px;
-      flex-grow: 1;
-      flex-shrink: 1;
     }
   }
 
   &__content {
-    display: flex;
-    flex-direction: column;
+    @include flex-col;
     height: 100%;
     border-top: 1px solid var(--color-blue-300);
     padding-top: 38px;
   }
 
   h3 {
+    font-size: 16px;
     margin: 0 auto;
   }
 }

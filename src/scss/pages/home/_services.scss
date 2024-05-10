@@ -6,11 +6,15 @@
 
   h2 {
     max-width: 286px;
-    line-height: 1.1;
+    line-height: 1.2;
     margin-bottom: 26px;
 
     +p {
       max-width: 286px;
+
+      @include media(tablet) {
+        max-width: 100%;
+      }
     }
   }
 

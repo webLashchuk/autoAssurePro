@@ -3,6 +3,10 @@
 
 .cases {
   &__item {
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--color-blue-300);
+    }
+
     &.section {
       padding-block: 64px;
     }
