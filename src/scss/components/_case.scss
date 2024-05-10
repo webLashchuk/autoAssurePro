@@ -23,22 +23,21 @@
   img {
     max-width: 595px;
     width: 100%;
-    max-height: 495px;
+    aspect-ratio: 16/13;
     object-fit: cover;
     border-radius: var(--radius-main);
 
     @include media(tablet-wide) {
       max-width: 495px;
-      max-height: 395px;
     }
 
     @include media(tablet) {
       max-width: 450px;
-      max-height: 350px;
     }
 
     @include media(mobile-l) {
       max-width: 100%;
+      aspect-ratio: 16/10;
       margin-bottom: 30px;
     }
   }
